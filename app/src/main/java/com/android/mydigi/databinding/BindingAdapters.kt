@@ -1,4 +1,4 @@
-package com.android.mydigi.utils
+package com.android.mydigi.databinding
 
 import android.widget.ImageView
 import android.widget.MediaController
