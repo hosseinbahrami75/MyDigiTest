@@ -1,14 +1,9 @@
 package com.android.mydigi.utils
 
-import com.android.mydigi.api.ApiCall
+import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
-import javax.inject.Inject
-import javax.inject.Named
 
-open class CallRetrofit {
-    @field:[Inject Named("non-cached")]
-    lateinit var apiCall: ApiCall
-
+open class BaseViewModel : ViewModel() {
     protected fun <T> callApi(
         request: Deferred<T>,
         onSuccess: (T) -> Unit,

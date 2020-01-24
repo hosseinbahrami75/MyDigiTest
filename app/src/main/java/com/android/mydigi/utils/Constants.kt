@@ -13,5 +13,6 @@ object Constants {
     const val REDIRECT_URI = "http://mydigipay.com/"
     const val SPOTIFY_URL = "https://api.spotify.com/"
     const val CLIENT_ID = "ba05b9cd59634cefa8493ac961d76ed6"
+    @JvmField
     var ACCESS_TOKEN = ""
 }

@@ -1,5 +1,6 @@
 package com.android.mydigi.api
 
+import com.android.mydigi.api.models.response.SearchResultBean
 import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.http.GET
@@ -12,7 +13,7 @@ import retrofit2.http.Query
 interface ApiCall {
 
 //    Search in Spotify
-//    @GET("/v1/search?type=artist,track")
-//    fun search(@Query("q") keyWord: String): Deferred<SearchResult?>
+    @GET("/v1/search?type=artist")
+    fun searchAsync(@Query("q") keyWord: String): Deferred<SearchResultBean>
 
 }

@@ -11,7 +11,6 @@ import javax.inject.Singleton
 object LoginRepository {
 
     fun authenticateSpotify(contextActivity: Activity) {
-
         val builder = AuthenticationRequest.Builder(
             Constants.CLIENT_ID,
             AuthenticationResponse.Type.TOKEN,
