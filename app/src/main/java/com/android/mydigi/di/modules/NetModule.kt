@@ -29,7 +29,7 @@ class NetModule {
     fun getService(): ApiCall {
         if (retrofit == null) {
             retrofit = Retrofit.Builder()
-                .baseUrl(Constants.API_BASE_URL)
+                .baseUrl(Constants.SPOTIFY_URL)
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(

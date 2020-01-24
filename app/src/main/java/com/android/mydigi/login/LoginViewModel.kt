@@ -7,10 +7,19 @@ import androidx.lifecycle.ViewModel
 import com.spotify.sdk.android.authentication.AuthenticationResponse
 import javax.inject.Inject
 
-class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {
+class LoginViewModel : ViewModel() {
     private var loginData: MutableLiveData<AuthenticationResponse> = MutableLiveData()
 
-    fun getLoginLiveData(context: Activity) {
-        loginRepository.authenticateSpotify(context)
+    fun requestAuthentication(context: Activity) {
+        LoginRepository.authenticateSpotify(context)
     }
+
+    fun getAuthenticationResponseData(): LiveData<AuthenticationResponse> {
+        return loginData
+    }
+
+    fun setAuthenticationResponse(authenticationResponse: AuthenticationResponse) {
+        loginData.value = authenticationResponse
+    }
+
 }
