@@ -34,25 +34,4 @@ open class BaseActivity : AppCompatActivity() {
     protected fun showShortToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
-
-    protected fun <T> callApi(
-        request: Deferred<T>,
-        onSuccess: (T) -> Unit,
-        onError: (Throwable) -> Unit
-    ) {
-        GlobalScope.launch {
-            try {
-                val response = request.await()
-                withContext(Dispatchers.Main) {
-                    onSuccess(response)
-                }
-            } catch (e: Throwable) {
-                withContext(Dispatchers.Main) {
-                    onError(e)
-                }
-            }
-        }
-    }
-
 }

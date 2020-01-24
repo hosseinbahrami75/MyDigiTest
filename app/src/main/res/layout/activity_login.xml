@@ -9,8 +9,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/darkBackground"
-        tools:context=".login.SpotifyLoginActivity">
+        tools:context=".login.SpotifyLoginActivity2">
 
+
+        <TextView
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="@string/login_in_spotify"
+            android:textColor="@color/paleLavender"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

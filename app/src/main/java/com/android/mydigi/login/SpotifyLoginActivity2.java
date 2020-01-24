@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.android.mydigi.R;
 import com.android.mydigi.databinding.ActivityLoginBinding;
+import com.android.mydigi.search.SearchActivity;
 import com.android.mydigi.utils.Constants;
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
@@ -46,7 +47,10 @@ public class SpotifyLoginActivity2 extends AppCompatActivity {
                 // Response was successful and contains auth token
                 case TOKEN:
                     // Handle successful response
+                    Constants.ACCESS_TOKEN = response.getAccessToken();
                     Log.v("spotifyToken", response.getAccessToken());
+                    startActivity(new Intent(this, SearchActivity.class));
+                    finish();
                     break;
                 // Auth flow returned an error
                 case ERROR:

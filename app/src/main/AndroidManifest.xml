@@ -16,10 +16,14 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".search.SearchActivity"></activity>
+        <activity android:name=".search.SearchActivity">
+
+        </activity>
         <activity
             android:name=".login.SpotifyLoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity android:name=".utils.BaseActivity" />
         <activity
             android:name="com.spotify.sdk.android.authentication.LoginActivity"

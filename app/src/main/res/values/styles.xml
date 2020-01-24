@@ -18,4 +18,13 @@
     </style>
 
 
+    <style name="Base.Widget.AppCompat.SearchView.MySearchView">
+        <item name="android:colorPrimaryDark" tools:targetApi="lollipop">@color/paleLavender</item>
+        <item name="android:colorAccent" tools:targetApi="lollipop">@color/paleLavender</item>
+        <item name="android:tint">@color/paleLavender</item>
+        <item name="android:textColorHint">@color/Gray_5</item>
+        <item name="android:textColor">@color/paleLavender</item>
+        <item name="android:editTextColor">@color/paleLavender</item>
+    </style>
+
 </resources>
