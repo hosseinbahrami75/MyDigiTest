@@ -4,6 +4,8 @@ data class ArtistItemsBean(
     val id: String,
     val images: List<ImageBean>,
     val name: String,
-    val release_date: String,
-    val total_tracks: Int
-)
+    val type: String,
+    val popularity: Int
+) {
+    val image = images[0]
+}

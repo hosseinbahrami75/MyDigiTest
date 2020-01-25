@@ -2,4 +2,5 @@
     <string name="app_name">MyDigiTest</string>
     <string name="login_in_spotify">Login in Spotify</string>
     <string name="search">Search</string>
+    <string name="img_artist">img_artist</string>
 </resources>
