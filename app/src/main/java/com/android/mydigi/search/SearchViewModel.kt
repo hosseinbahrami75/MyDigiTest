@@ -17,4 +17,8 @@ class SearchViewModel: BaseViewModel() {
         return searchLiveDat
     }
 
+    fun clearData() {
+        searchLiveDat = MutableLiveData()
+    }
+
 }
